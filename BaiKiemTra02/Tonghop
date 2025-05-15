@@ -1,0 +1,69 @@
+def uscln(a,b):
+    #tinh uoc chung lon nhat 
+    while b != 0:
+        a,b = b,a % b
+        
+        
+    return a
+def bscnn(a,b):
+    return  a * b // uscln(a,b)
+
+#nhap hai so nguyen duong 
+a =int(input("Nhap so nguyen duong a:"))
+b = int(input("Nhap so nguyen duong b:"))
+
+if a > 0 and b > 0:
+    print("USCLN của", a, "và", b, "là:", uscln(a, b))
+    print("BSCNN của", a, "và", b, "là:", bscnn(a, b))
+else:
+    print("Vui lòng nhập hai số nguyên dương.")
+    
+   
+   
+   def tinh_tong(n):
+    tong = 0
+    for i in range(1, n + 1):
+        tong += float(1 / i)
+    return tong
+
+# Nhập số nguyên dương từ bàn phím
+n = int(input("Nhập số nguyên dương n: "))
+if n > 0:
+    ket_qua = tinh_tong(n)
+    print(f"Tổng S = {ket_qua}")
+else:
+    print("Vui lòng nhập số nguyên dương!")
+2 
+ 
+ 
+ 
+ 
+ef tinh_tong_chan(danh_sach):
+    tong = 0
+    for x in danh_sach:
+        if x % 2 == 0:
+            tong += x
+    return tong
+
+def tim_phan_tu_lon_nhat(danh_sach):
+    return max(danh_sach)
+
+# Nhập số lượng phần tử n
+n = int(input("Nhập số lượng phần tử n (0 < n < 100): "))
+if 0 < n < 100:
+    day_so = []
+    for i in range(n):
+        so = int(input(f"Nhập phần tử thứ {i+1}: "))
+        day_so.append(so)
+
+    # a) Tổng số chẵn
+    tong_chan = tinh_tong_chan(day_so)
+    print(f"Tổng các phần tử chẵn trong dãy là: {tong_chan}")
+
+    # b) Phần tử lớn nhất
+    max_phan_tu = tim_phan_tu_lon_nhat(day_so)
+    print(f"Phần tử lớn nhất trong dãy là: {max_phan_tu}")
+else:
+    print("Giá trị n không hợp lệ! Phải 0 < n < 100.")   
+    
+    
